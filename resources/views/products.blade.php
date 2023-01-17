@@ -16,6 +16,8 @@
             </div>
             <div class="col-lg-8">
                 <h2 class="text-center text-bold">Laravel 9 ajax CRUD </h2>
+                <span>Test</span>
+                <p>oops</p>
                 <a class="btn btn-success mb-2" href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Product</a>
                 <table class="table table-bordered table-hover">
                     <tr class="bg-info">
