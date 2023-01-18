@@ -150,5 +150,22 @@
         //         }
         //     })
         // }
+
+        //search
+        $(document).on('keyup',function(e){
+            e.preventDefault();
+            var search_string = $('#search').val();
+            $.ajax({
+                url:"{{route('search-Product')}}",
+                method:'GET',
+                data:{search_string:search_string},
+                success:function(res){
+                    $('.table-data').html(res);
+                    if(res.status=='Nothing_found'){
+                        $('.table-data').html('<span class="text-danger">'+'Nothing Found'+'</span>');
+                    }
+                }
+            });
+        });
     });
 </script>

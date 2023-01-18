@@ -19,3 +19,4 @@ Route::post('/add-Product',[ProductController::class,'saveProduct'])->name('add-
 Route::post('/update-Product',[ProductController::class,'updateProduct'])->name('update-Product');
 Route::post('/delete-Product',[ProductController::class,'deleteProduct'])->name('delete-Product');
 // Route::get('/pagination/paginate-data',[ProductController::class,'pagination']);
+Route::get('/search-Product',[ProductController::class,'searchProduct'])->name('search-Product');

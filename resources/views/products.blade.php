@@ -17,7 +17,14 @@
             </div>
             <div class="col-lg-8">
                 <h2 class="text-center text-bold">Laravel 9 ajax CRUD </h2>
-                <a class="btn btn-success mb-2" href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Product</a>
+                <div class="row">
+                    <div class="col-lg-3">
+                        <a class="btn btn-success mb-2" href="" data-bs-toggle="modal" data-bs-target="#exampleModal">Add Product</a>
+                    </div>
+                    <div class="col-lg-9">
+                        <input type="search" name="search" id="search" class="mb-3 form-control" placeholder="Search Product..">
+                    </div>
+                </div>
                 <div class="table-data">
                     <table class="table table-bordered table-hover">
                         <tr class="bg-info">
