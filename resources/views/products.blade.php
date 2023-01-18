@@ -59,8 +59,8 @@
                         </tr>
                         @endforeach
                     </table>
+                    {{ $products->links() }}
                 </div>
-                {!! $products->links() !!}
             </div>
         </div>
         <div class="row">

@@ -137,19 +137,19 @@
         });
 
         //pagination customize
-        // $(document).on('click','.pagination a', function(e){
-        //     e.preventDefault();
-        //     var page = $(this).attr('href').split('page=')[1]
-        //     pagination(page);
-        // });
-        // function pagination(page){
-        //     $.ajax({
-        //         url:"/pagination/paginate-data?page="+page,
-        //         success: function(res){
-        //             $('.table-data').html(res);
-        //         }
-        //     })
-        // }
+        $(document).on('click','.pagination a', function(e){
+            e.preventDefault();
+            var page = $(this).attr('href').split('page=')[1]
+            pagination(page);
+        });
+        function pagination(page){
+            $.ajax({
+                url:"/pagination/paginate-data?page="+page,
+                success: function(res){
+                    $('.table-data').html(res);
+                }
+            })
+        }
 
         //search
         $(document).on('keyup',function(e){

@@ -31,4 +31,4 @@
     </tr>
     @endforeach
 </table>
-{!! $products->links() !!}
+{{ $products->links() }}

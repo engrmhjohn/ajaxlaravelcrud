@@ -62,12 +62,12 @@ class ProductController extends Controller
             'status'=>'success'
         ]);
     }
-    // public function pagination(Request $request){
-    //     $products = Product::latest()->paginate(5);
-    //     return view('pagination_products',[
-    //         'products'=>$products
-    //     ])->render();
-    // }
+    public function pagination(Request $request){
+        $products = Product::latest()->paginate(5);
+        return view('pagination_products',[
+            'products'=>$products
+        ])->render();
+    }
     public function searchProduct(Request $request){
         $products = Product::where('name','LIKE','%'.$request->search_string.'%')
         ->orwhere('price','LIKE','%'.$request->search_string.'%')
