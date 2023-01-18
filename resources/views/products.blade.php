@@ -40,7 +40,10 @@
                             >
                                 <i class="las la-edit"></i>
                             </a>
-                            <a class="btn btn-danger delete_product" href="" data-id="{{$product->id}}">
+                            <a href="" 
+                            class="btn btn-danger delete_product" 
+                            data-id="{{$product->id}}"
+                            >
                                 <i class="las la-times"></i>
                             </a>
                         </td>
