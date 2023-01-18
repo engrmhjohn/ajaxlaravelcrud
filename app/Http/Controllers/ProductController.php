@@ -8,7 +8,7 @@ use App\Models\Product;
 class ProductController extends Controller
 {
     public function index(){
-        $products = Product::latest()->paginate(4);
+        $products = Product::latest()->paginate(5);
         return view('products',[
             'products'=>$products
         ]);
@@ -62,5 +62,11 @@ class ProductController extends Controller
             'status'=>'success'
         ]);
     }
+    // public function pagination(Request $request){
+    //     $products = Product::latest()->paginate(5);
+    //     return view('pagination_products',[
+    //         'products'=>$products
+    //     ])->render();
+    // }
 
 }

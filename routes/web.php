@@ -18,4 +18,4 @@ Route::get('/',[ProductController::class,'index'])->name('/');
 Route::post('/add-Product',[ProductController::class,'saveProduct'])->name('add-Product');
 Route::post('/update-Product',[ProductController::class,'updateProduct'])->name('update-Product');
 Route::post('/delete-Product',[ProductController::class,'deleteProduct'])->name('delete-Product');
-// Route::get('/edit-Product/{id}',[ProductController::class,'editProduct'])->name('edit-Product');
+// Route::get('/pagination/paginate-data',[ProductController::class,'pagination']);

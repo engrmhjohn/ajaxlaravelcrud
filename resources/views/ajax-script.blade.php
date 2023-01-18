@@ -14,6 +14,24 @@
                         $('#exampleModal').modal('hide');
                         $('#addProductForm')[0].reset();
                         $('.table').load(location.href+' .table');
+                        Command: toastr["success"]("You've added one product!", "Success")
+                        toastr.options = {
+                        "closeButton": true,
+                        "debug": false,
+                        "newestOnTop": false,
+                        "progressBar": true,
+                        "positionClass": "toast-top-right",
+                        "preventDuplicates": false,
+                        "onclick": null,
+                        "showDuration": "300",
+                        "hideDuration": "1000",
+                        "timeOut": "5000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                        }
                     }
                 },
                 error:function(err){
@@ -52,6 +70,24 @@
                         $('#editModal').modal('hide');
                         $('#editProductForm')[0].reset();
                         $('.table').load(location.href+' .table');
+                        Command: toastr["success"]("You've updated one product!", "Success")
+                        toastr.options = {
+                        "closeButton": true,
+                        "debug": false,
+                        "newestOnTop": false,
+                        "progressBar": true,
+                        "positionClass": "toast-top-right",
+                        "preventDuplicates": false,
+                        "onclick": null,
+                        "showDuration": "300",
+                        "hideDuration": "1000",
+                        "timeOut": "5000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                        }
                     }
                 },
                 error:function(err){
@@ -67,7 +103,6 @@
         $(document).on('click','.delete_product',function(e){
             e.preventDefault();
             var product_id = $(this).data('id');
-            // alert(product_id);
 
             if(confirm('Are you sure to delete this product?')){
                 $.ajax({
@@ -77,10 +112,43 @@
                     success:function(res){
                         if(res.status=='success'){
                             $('.table').load(location.href+' .table');
+                            Command: toastr["success"](" You've deleted one product!", "Success")
+                            toastr.options = {
+                            "closeButton": true,
+                            "debug": false,
+                            "newestOnTop": false,
+                            "progressBar": true,
+                            "positionClass": "toast-top-right",
+                            "preventDuplicates": false,
+                            "onclick": null,
+                            "showDuration": "300",
+                            "hideDuration": "1000",
+                            "timeOut": "5000",
+                            "extendedTimeOut": "1000",
+                            "showEasing": "swing",
+                            "hideEasing": "linear",
+                            "showMethod": "fadeIn",
+                            "hideMethod": "fadeOut"
+                            }
                         }
                     },
                 });
             }
         });
+
+        //pagination customize
+        // $(document).on('click','.pagination a', function(e){
+        //     e.preventDefault();
+        //     var page = $(this).attr('href').split('page=')[1]
+        //     pagination(page);
+        // });
+        // function pagination(page){
+        //     $.ajax({
+        //         url:"/pagination/paginate-data?page="+page,
+        //         success: function(res){
+        //             $('.table-data').html(res);
+        //         }
+        //     })
+        // }
     });
 </script>
